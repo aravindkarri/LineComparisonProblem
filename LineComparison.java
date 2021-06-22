@@ -28,14 +28,18 @@ public class LineComparison {
 		Double length2 = (Math.sqrt((a2-a1)*(a2-a1) + (b2-b1)*(b2-b1)));
 		System.out.printf("length of first line is = %.2f \n ",length2);
 		
-		boolean x = (length.equals(length2));
-		if (x)
+		int x = (length.compareTo(length2));
+		if (x > 0)
 		{
-			System.out.println("Length of two lines are equal");
+			System.out.println("length of Line 1 is greater than line2");
+		}
+		else if (x < 0)
+		{
+			System.out.println("length line 2 is greater than line1");
 		}
 		else
 		{
-			System.out.println("Length of two lines aren't equal");
+			System.out.println("length of two lines are equal");
 		}
 		
 	}
